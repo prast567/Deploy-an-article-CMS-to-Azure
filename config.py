@@ -3,16 +3,16 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
+    SECRET_KEY = '3\xbfQC\x0c\x0b\x08\x12\x9ceL,\x19+\xc8\x80'
 
-    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'ENTER_STORAGE_ACCOUNT_NAME'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'ENTER_BLOB_STORAGE_KEY'
-    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'ENTER_IMAGES_CONTAINER_NAME'
+    BLOB_ACCOUNT = 'storagetestercms'
+    BLOB_STORAGE_KEY = 'q9f82aoKckJrrOjKwVL18muaCzD7XADUVCcot5g0HUi/fFcEiLXAX1EqTtQqZPgeFESMbZhxjo14Yt5AR8w8bw=='
+    BLOB_CONTAINER = 'blobcontainer'
 
-    SQL_SERVER = os.environ.get('SQL_SERVER') or 'ENTER_SQL_SERVER_NAME.database.windows.net'
-    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'ENTER_SQL_DB_NAME'
-    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'ENTER_SQL_SERVER_USERNAME'
-    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'ENTER_SQL_SERVER_PASSWORD'
+    SQL_SERVER = 'mycms-db-server.database.windows.net'
+    SQL_DATABASE = 'cms_db'
+    SQL_USER_NAME = 'cms-db'
+    SQL_PASSWORD = 'Myname@123'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
     SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
